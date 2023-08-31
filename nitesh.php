@@ -355,12 +355,146 @@
 //-----------------------array_slice-------------------------//
 
 
-$a=array("a"=>"red","b"=>"green","c"=>"blue","d"=>"yellow","e"=>"brown");
-print_r(array_slice($a,1,2));
+// $a=array("a"=>"red","b"=>"green","c"=>"blue","d"=>"yellow","e"=>"brown");
+// print_r(array_slice($a,1,2));
 
-echo "<br>";
-$a=array("red","green","blue","yellow","brown");
-print_r(array_slice($a,1,2,true));
+// echo "<br>";
+// $a=array("red","green","blue","yellow","brown");
+// print_r(array_slice($a,1,2,true));
+
+
+//-------------------- Create a function in php-------------//
+
+// function sendmsg(){
+//   echo "Hey Nitesh.............!!!!!!";
+// }
+// sendmsg();
+
+
+//---------------function Argument-------------------------//
+
+// function cse($course,$credit){
+//   echo "$course with credit $credit<br>";
+// }
+
+// cse("HTML",3);
+// cse("CSS",2);
+// cse("Javascript",3);
+// cse("PHP",4);
+// cse("Reactjs",5);
+
+
+//------------Loosely type Language-------------------//
+
+// function add(int $a, int $b){
+//   echo $a+$b;
+// }
+// add(2,3);
+
+
+///----------------Php Default Arg. Value------------------//
+
+// function setchildren(int $children=0){
+//   echo "Total number of children are:$children<br>";
+// }
+
+// setchildren(2);
+// setchildren(1);
+// setchildren();
+// setchildren(3);
+
+
+//----------------Returning Value-----------------------//
+
+// function add(int $a, int $b){
+//    return $a+$b;
+//  }
+
+//  echo "5+10=" .add(5,10) . "<br>";
+//  echo "7+13=" .add(7,13) . "<br>";
+//  echo "2+4=" .add(2,4) . "<br>";
+
+
+//----passing a Arg. to a function by Reference----------------//
+
+// function selfMultiply(&$number){
+// $number*=$number;
+// return $number;
+// }
+// $mynum=5;
+// echo $mynum;
+// echo "<br>";
+// selfmultiply($mynum);
+// echo $mynum;
+
+
+// function product(&$value){
+//   $value*=5;
+// }
+// $num=2;
+// product($num);
+// echo $num;
+
+
+
+// function adder(&$str2){
+//   $str2='Call by Reference';
+// }
+// $str='Hello';
+// adder($str);
+// echo $str;
+
+
+
+///-----------Local Variable---------------------//
+
+// function mytest(){
+//   $lang="REACTJS";
+//   echo "WEB DEVELOPMENT LANGUAGE:" .$lang;
+// }
+// mytest();
+
+
+///-------------Global variable---------------///
+
+// $lang="ReactJs";
+// function mytest(){
+//  global $lang;
+//  echo $lang;
+//   echo "<br>";
+// }
+// mytest();
+// echo $lang;
+
+
+// $lang="ReactJs";
+// function mytest(){
+//   $lang="C++";
+//  echo $lang;
+//   echo "<br>";
+// }
+// mytest();
+// echo $lang;
+
+
+// $lang="ReactJs";
+// function mytest(){
+//  echo $lang;
+//   echo "<br>";
+// }
+// mytest();
+// echo $lang;
+
+
+
+$lang="ReactJs";
+function mytest(){
+  $i=$GLOBALS['lang'];
+  echo $i;
+ 
+}
+mytest();
+
 
 
 ?>
