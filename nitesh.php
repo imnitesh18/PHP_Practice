@@ -487,13 +487,52 @@
 
 
 
-$lang="ReactJs";
-function mytest(){
-  $i=$GLOBALS['lang'];
-  echo $i;
+// $lang="ReactJs";
+// function mytest(){
+//   $i=$GLOBALS['lang'];
+//   echo $i;
  
-}
-mytest();
+// }
+// mytest();
+
+
+
+///---------------------static variable----------------------------------//
+
+// function static_var(){
+//   static $num1=2;
+//   $num2=5;
+
+//   $num1++;
+//   $num2++;
+
+//   echo "Static:" .$num1."<br>";
+//  echo "Non-Static:" .$num2."<br>";
+
+// }
+// //first function call
+// static_var();
+
+// // second function call
+// static_var();
+
+
+
+// function myTest(){
+//   static $x=1;
+//   echo $x;
+//   $x++;
+// }
+
+// myTest();
+// echo "<br>";
+// myTest();
+// echo "<br>";
+// myTest();
+
+
+
+
 
 
 
