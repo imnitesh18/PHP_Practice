@@ -532,10 +532,17 @@
 
 
 
-
-
-
-
+  $x=4;
+  $y=3;
+  function fun($x=3,$y=4){
+    $z=$x+$y/$y+$x;
+    echo "$z";
+  }
+  
+    echo "$x";
+    echo "$y";
+    fun($x,$y);
+  
 ?>
 
 
