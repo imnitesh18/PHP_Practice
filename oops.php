@@ -1,13 +1,35 @@
 <?php
-class MyClass{
-  public $property;
-  public function myMethod(){
-    echo "This is a member function.\n";
+// class MyClass{
+//   public $property;
+//   public function myMethod(){
+//     echo "This is a member function.\n";
+//   }
+// }
+
+// $myObject=new myClass();
+
+// $myObject->myMethod();
+
+
+
+class Myclass{
+  protected $protectedProperty;
+
+  protected function protectedMethod(){
+    echo $this->protectedProperty;
   }
 }
 
-$myObject=new myClass();
+class ChildClass extends MyClass{
+  public function accessProtectedProperty(){
+    $this->protectedProperty="This is a protected property.";
+    $this->protectedMethod();
+  }
+}
 
-$myObject->myMethod();
+$childObj=new ChildClass();
+$childObj->accessProtectedProperty();
+$childObj->$protectedProperty;
+
 
 ?>
